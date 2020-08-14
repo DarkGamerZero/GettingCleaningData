@@ -45,5 +45,5 @@ The run_analysis.R script performs the data preparation, followed by the 5 steps
   * Put angle and gravity in uppercase
 
 * From the data set in step 4, creates a second, independent data set with the average of each variable for each activity and each subject
-    * final (180 rows, 88 columns) is created by sumarizing data2; taking the means of each variable for each activity and each subject, after grouping them by subject and activity.
+    * final (180 rows, 88 columns) is created by sumarizing data2; taking the mean of each variable for each activity and each subject, after grouping them by subject and activity.
     * Export final into Final.txt file.
