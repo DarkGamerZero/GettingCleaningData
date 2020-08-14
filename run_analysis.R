@@ -3,7 +3,7 @@ library(dplyr)
 
 #Download file
 
-filename <- "GCdata2_Project.zip"
+filename <- "GCdata_Project.zip"
 if (!file.exists(filename)){
   fileURL <- "https://d396qusza40orc.cloudfront.net/getdata2%2Fprojectfiles%2FUCI%20HAR%20data2set.zip"
   download.file(fileURL, filename, method="curl")
