@@ -38,9 +38,11 @@ The run_analysis.R script performs the data preparation and then followed by the
   * All Acc in column’s name replaced by Accelerometer
   * All Gyro in column’s name replaced by Gyroscope
   * All BodyBody in column’s name replaced by Body
-  * All Mag in column’s name replaced by Magnitude
+  * All Mag in column’s name replaced by Value
   * All start with character f in column’s name replaced by Frequency
   * All start with character t in column’s name replaced by Time
+  * All function names in culumn's names replaced with just the names
+  * Put angle and gravity in uppercase
 
 * From the data set in step 4, creates a second, independent data set with the average of each variable for each activity and each subject
     * final (180 rows, 88 columns) is created by sumarizing data2; taking the means of each variable for each activity and each subject, after grouping them by subject and activity.
