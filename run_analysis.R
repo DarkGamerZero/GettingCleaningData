@@ -5,26 +5,26 @@ library(dplyr)
 
 filename <- "GCdata_Project.zip"
 if (!file.exists(filename)){
-  fileURL <- "https://d396qusza40orc.cloudfront.net/getdata2%2Fprojectfiles%2FUCI%20HAR%20data2set.zip"
+  fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
   download.file(fileURL, filename, method="curl")
 }  
 
 #Unzip the file to continue
 
-if (!file.exists("UCI Datasets")) { 
+if (file.exists("UCI HAR Dataset")) { 
   unzip(filename)
 }
 
 #Read the datasets and assign column names
 
-features <- read.table("UCI Datasets/features.txt", col.names = c("Count","Features"))
-activities <- read.table("UCI Datasets/activity_labels.txt", col.names = c("Code", "Activity"))
-subject_test <- read.table("UCI Datasets/test/subject_test.txt", col.names = "Subject")
-x_test <- read.table("UCI Datasets/test/X_test.txt", col.names = features$Features)
-y_test <- read.table("UCI Datasets/test/y_test.txt", col.names = "Code")
-subject_train <- read.table("UCI Datasets/train/subject_train.txt", col.names = "Subject")
-x_train <- read.table("UCI Datasets/train/X_train.txt", col.names = features$Features)
-y_train <- read.table("UCI Datasets/train/y_train.txt", col.names = "Code")
+features <- read.table("UCI HAR Dataset/features.txt", col.names = c("Count","Features"))
+activities <- read.table("UCI HAR Dataset/activity_labels.txt", col.names = c("Code", "Activity"))
+subject_test <- read.table("UCI HAR Dataset/test/subject_test.txt", col.names = "Subject")
+x_test <- read.table("UCI HAR Dataset/test/X_test.txt", col.names = features$Features)
+y_test <- read.table("UCI HAR Dataset/test/y_test.txt", col.names = "Code")
+subject_train <- read.table("UCI HAR Dataset/train/subject_train.txt", col.names = "Subject")
+x_train <- read.table("UCI HAR Dataset/train/X_train.txt", col.names = features$Features)
+y_train <- read.table("UCI HAR Dataset/train/y_train.txt", col.names = "Code")
 
 #Merge the training and test datasets
 x <- rbind(x_test, x_train)
