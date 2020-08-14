@@ -12,5 +12,5 @@ The UCI Human Activity Recognition Using Smartphones Data Set used can be obtain
   3. Use descriptive activity names to name the activities in the data set
   4. Appropriately label the data set with descriptive variable names.
   5. From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
-* **Final.csv** is the CSV file that contains the tidy dataset
+* **Final.txt** is the text file that contains the tidy dataset
 
