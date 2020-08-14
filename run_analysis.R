@@ -12,7 +12,7 @@ if (!file.exists(filename)){
 #Unzip the file to continue
 
 if (!file.exists("UCI Datasets")) { 
-  unzip(filename) 
+  unzip(filename)
 }
 
 #Read the datasets and assign column names
